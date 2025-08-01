@@ -145,3 +145,7 @@ document.getElementById("yesBtn").addEventListener("click", () => {
 document.getElementById("noBtn").addEventListener("click", () => {
   alert("強がっちゃって、素直になれないんですね。やれやれ、、、");
 });
+
+document.getElementById("testButton").addEventListener("click", () => {
+  showHorrorEffect();
+});
