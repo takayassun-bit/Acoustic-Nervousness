@@ -136,10 +136,10 @@ function resetTurn() {
 }
 
 document.getElementById("yesBtn").addEventListener("click", () => {
-  alert("プッ、驚いちゃって");
   const laugh = document.getElementById("laughSound");
   laugh.currentTime = 0;
   laugh.play();
+  alert("プッ、驚いちゃって");
 });
 
 document.getElementById("noBtn").addEventListener("click", () => {
