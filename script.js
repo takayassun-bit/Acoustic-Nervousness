@@ -39,6 +39,10 @@ cards.forEach((card, index) => {
 cards.forEach(card => {
   card.addEventListener("click", () => {
     if (lock || card.classList.contains("matched")) return;
+    if (matchCount === 4) {
+        showHorrorEffect();
+        return;
+    }    
 
     // 一時的にロックして他のクリックを防ぐ
     lock = true;
@@ -62,10 +66,6 @@ cards.forEach(card => {
           firstCard.classList.add("matched");
           secondCard.classList.add("matched");
           matchCount++;
-
-          if (matchCount === 4) {
-            showHorrorEffect();
-          }
 
           resetTurn();
         } else {
@@ -145,7 +145,8 @@ document.getElementById("yesBtn").addEventListener("click", () => {
 document.getElementById("noBtn").addEventListener("click", () => {
   alert("強がっちゃって、素直になれないんですね。やれやれ、、、");
 });
-
+/*
 document.getElementById("testButton").addEventListener("click", () => {
   showHorrorEffect();
 });
+*/
