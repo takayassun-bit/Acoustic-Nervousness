@@ -115,7 +115,7 @@ function playSound(src, callback) {
 // ホラー演出
 function showHorrorEffect() {
   const wrapper = document.getElementById("horrorWrapper");
-  const scream = document.getElementById("screamSound");
+  const scream = new Audio("scream.mp3");
   wrapper.style.display = "flex";
   scream.volume = 1.0; // ホラー音の音量を上げる
   scream.currentTime = 0;
